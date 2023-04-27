@@ -72,8 +72,6 @@ const MovieDetails = () => {
 		dispatch(getMovieDetails(id) as any);
 	}, [dispatch, id]);
 
-	console.log(movieDetails);
-
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>{error}</p>;
 	if (!movieDetails) return null;

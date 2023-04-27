@@ -1,10 +1,11 @@
 import { MoviesActionTypes, MovieAction } from '../actions/types';
 import { Movies, MovieDetails } from '../types';
+import { Movie } from '../types/movie';
 
 export interface MoviesState {
 	loading: boolean;
 	error: string | null;
-	data: Movies | null;
+	data: Movie[] | null;
 	movieDetails?: MovieDetails | null;
 }
 

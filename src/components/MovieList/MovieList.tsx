@@ -20,6 +20,8 @@ const MovieList: VFC = () => {
 		return state.movies?.data;
 	});
 
+	console.log(movies);
+
 	return (
 		<div className={classes.root}>
 			<Typography variant="h4" className={classes.title}>

@@ -1,7 +1,8 @@
 import { AnyAction, Dispatch } from 'redux';
 import * as api from '../api';
 import { MoviesActionTypes, SetMoviesAction } from './types';
-import { MovieDetails, Movies } from '../types';
+import { MovieDetails } from '../types';
+import { Movie } from '../types/movie';
 
 export const searchMovies = (query: string) => async (dispatch: Dispatch) => {
 	try {
@@ -41,7 +42,7 @@ export const getMovieDetails =
 		}
 	};
 
-export const setMovies = (movies: Movies): SetMoviesAction => {
+export const setMovies = (movies: Movie[]): SetMoviesAction => {
 	return {
 		type: MoviesActionTypes.SET_MOVIES,
 		payload: movies,
