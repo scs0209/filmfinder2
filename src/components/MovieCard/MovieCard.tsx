@@ -2,6 +2,7 @@ import React, { VFC } from 'react';
 import { Card, CardActionArea, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
 import { Movie } from '../../types/movie';
 import { getImageUrl } from '../../api';
+import { Link } from 'react-router-dom';
 
 interface Props {
 	movie: Movie;
@@ -22,7 +23,7 @@ const MovieCard: VFC<Props> = ({ movie }) => {
 
 	return (
 		<Card className={classes.root}>
-			<CardActionArea>
+			<CardActionArea component={Link} to={`/movies/${movie.id}`}>
 				<CardMedia className={classes.media} image={posterUrl} title={movie.title} />
 				<CardContent>
 					<Typography gutterBottom variant="h5" component="h2">

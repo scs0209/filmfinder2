@@ -26,6 +26,7 @@ const moviesReducer = (state = initialState, action: MovieAction): MoviesState =
 		case MoviesActionTypes.GET_MOVIE_DETAILS_REQUEST:
 			return { ...state, loading: true };
 		case MoviesActionTypes.GET_MOVIE_DETAILS_SUCCESS:
+			console.log(state.data, action.payload);
 			return { loading: false, error: null, data: state.data, movieDetails: action.payload };
 		case MoviesActionTypes.GET_MOVIE_DETAILS_FAILURE:
 			return { ...state, loading: false, error: action.payload, movieDetails: null };
