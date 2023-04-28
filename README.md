@@ -72,7 +72,7 @@ $ npm run start
 
 |                                                           메인 페이지                                                            |                                                      영화 상세 정보 페이지                                                      |
 | :------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
-| <img width="329" src= "https://user-images.githubusercontent.com/110822847/229567497-b5607bb5-5d3c-44e3-b32e-0b3edbf83564.PNG"/> | <img width="329" src="https://user-images.githubusercontent.com/110822847/229567670-2b7d644f-4e1e-4b93-a168-89c2d32f0b68.PNG"/> |
+| <img width="329" src= "https://user-images.githubusercontent.com/110822847/235189563-933ae0c0-53c8-471c-b7ca-222a1216a14c.PNG"/> | <img width="329" src="https://user-images.githubusercontent.com/110822847/235189718-e76f7a48-7bba-4ad2-a559-d72e58b4ff08.PNG"/> |
 
 ---
 
