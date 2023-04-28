@@ -4,13 +4,11 @@ import { AppBar, Toolbar, IconButton, TextField } from '@material-ui/core';
 import { Search as SearchIcon } from '@material-ui/icons';
 import { searchMovies } from '../../actions';
 import { useStyles } from './styles'; // styles.ts 파일에서 useStyles 함수 불러오기
-import { useNavigate } from 'react-router';
 import MovieList from '../../components/MovieList/MovieList';
 
 const SearchBar: VFC = () => {
 	const classes = useStyles();
 	const dispatch = useDispatch();
-	const navigate = useNavigate();
 	const [query, setQuery] = useState('');
 
 	const handleQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {

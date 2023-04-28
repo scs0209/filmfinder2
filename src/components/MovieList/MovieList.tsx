@@ -1,18 +1,9 @@
 import React, { VFC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../reducers';
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import MovieCard from '../MovieCard/MovieCard';
-
-const useStyles = makeStyles((theme) => ({
-	root: {
-		flexGrow: 1,
-		padding: theme.spacing(2),
-	},
-	title: {
-		marginBottom: theme.spacing(2),
-	},
-}));
+import { useStyles } from './styles';
 
 const MovieList: VFC = () => {
 	const classes = useStyles();
@@ -20,12 +11,10 @@ const MovieList: VFC = () => {
 		return state.movies?.data;
 	});
 
-	console.log(movies);
-
 	return (
 		<div className={classes.root}>
 			<Typography variant="h4" className={classes.title}>
-				Movies
+				영화 목록
 			</Typography>
 			<Grid container spacing={2}>
 				{movies?.map((movie: any) => (

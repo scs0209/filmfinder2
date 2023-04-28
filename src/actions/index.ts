@@ -1,4 +1,4 @@
-import { AnyAction, Dispatch } from 'redux';
+import { Dispatch } from 'redux';
 import * as api from '../api';
 import { MoviesActionTypes, SetMoviesAction } from './types';
 import { MovieDetails } from '../types';
@@ -12,7 +12,7 @@ export const searchMovies = (query: string) => async (dispatch: Dispatch) => {
 
 		dispatch({
 			type: MoviesActionTypes.SEARCH_MOVIES_SUCCESS,
-			payload: data,
+			payload: data as Movie,
 		});
 	} catch (error: any) {
 		dispatch({

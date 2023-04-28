@@ -1,22 +1,7 @@
+import initialState, { MovieState } from '../types/state';
 import { MoviesActionTypes, MovieAction } from '../actions/types';
-import { Movies, MovieDetails } from '../types';
-import { Movie } from '../types/movie';
 
-export interface MoviesState {
-	loading: boolean;
-	error: string | null;
-	data: Movie[] | null;
-	movieDetails?: MovieDetails | null;
-}
-
-const initialState: MoviesState = {
-	loading: false,
-	error: null,
-	data: null,
-	movieDetails: null,
-};
-
-const moviesReducer = (state = initialState, action: MovieAction): MoviesState => {
+const moviesReducer = (state = initialState, action: MovieAction): MovieState => {
 	switch (action.type) {
 		case MoviesActionTypes.SEARCH_MOVIES_REQUEST:
 			return { ...state, loading: true };

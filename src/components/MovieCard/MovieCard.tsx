@@ -1,21 +1,13 @@
 import React, { VFC } from 'react';
-import { Card, CardActionArea, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
 import { Movie } from '../../types/movie';
 import { getImageUrl } from '../../api';
 import { Link } from 'react-router-dom';
+import { useStyles } from './styles';
 
 interface Props {
 	movie: Movie;
 }
-
-const useStyles = makeStyles({
-	root: {
-		maxWidth: 345,
-	},
-	media: {
-		height: 140,
-	},
-});
 
 const MovieCard: VFC<Props> = ({ movie }) => {
 	const classes = useStyles();

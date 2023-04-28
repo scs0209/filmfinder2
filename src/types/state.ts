@@ -1,15 +1,15 @@
-import { MovieDetails, Movies } from '../types';
+import { MovieDetails } from '../types';
 import { Movie } from './movie';
 
 export interface MovieState {
-	movies: Movie[];
-	movieDetails: MovieDetails | null;
+	data: Movie[] | null;
+	movieDetails?: MovieDetails | null;
 	loading: boolean;
 	error: string | null;
 }
 
 const initialState: MovieState = {
-	movies: [],
+	data: [],
 	movieDetails: null,
 	loading: false,
 	error: null,
