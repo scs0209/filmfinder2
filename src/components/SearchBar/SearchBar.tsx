@@ -28,7 +28,7 @@ const SearchBar: VFC = () => {
 
 	return (
 		<div>
-			<AppBar position="static">
+			<AppBar position="static" className={classes.appBar}>
 				<Toolbar>
 					<div className={classes.search}>
 						<div className={classes.searchIcon}>

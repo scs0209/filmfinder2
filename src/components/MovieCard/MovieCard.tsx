@@ -22,7 +22,7 @@ const MovieCard: VFC<Props> = ({ movie }) => {
 						{movie.title}
 					</Typography>
 					<Typography variant="body2" color="textSecondary" component="p">
-						{movie.vote_average}
+						평점: {movie.vote_average}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
