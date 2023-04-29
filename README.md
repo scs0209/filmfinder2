@@ -1,5 +1,9 @@
 # FilmFinder
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/110822847/235289858-a8950f96-5c58-42f9-8a56-5abc50c541af.png" width="329">
+</div>
+
 ## 프로젝트 정보
 
 > **1인 개발** <br/> **개발기간: 2023.4.24 ~ 2023.4.29**
