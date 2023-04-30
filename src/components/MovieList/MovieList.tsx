@@ -36,6 +36,8 @@ const MovieList: VFC = () => {
 			setTotalPages(Math.ceil(searchedMovies.length / moviesPerPage));
 		} else {
 			setTotalPages(Math.ceil(popularMovies?.length || 0 / moviesPerPage));
+			// popularMovies?.length || 0 설정한 이유는 popularMovies가 undefined일 경우 .length를 사용할 수 없기 때문에 타입스크립트에서 에러를 발생시키기 때문입니다.
+			//그래서 에러를 해결하기 위해서는 popularMovies가 undefined일 경우를 처리해주어야 하는데, popularMovies?.length || 0 이렇게 nullish coalescing 연산자를 사용하여 popularMovies가 undefined일 경우 0을 반환하도록 처리할 수 있습니다.
 		}
 	}, [searchedMovies, popularMovies]);
 
@@ -55,7 +57,7 @@ const MovieList: VFC = () => {
 					</Grid>
 				))}
 			</Grid>
-			<Pagination count={totalPages} page={page} onChange={handlePageChange} />
+			<Pagination count={totalPages} page={page} onChange={handlePageChange} className={classes.pagination} />
 		</div>
 	);
 };

@@ -8,4 +8,16 @@ export const useStyles = makeStyles((theme) => ({
 	title: {
 		marginBottom: theme.spacing(2),
 	},
+	pagination: {
+		marginTop: theme.spacing(2),
+		display: 'flex',
+		justifyContent: 'center',
+		'& .MuiPaginationItem-root': {
+			borderRadius: '50%',
+		},
+		'& .Mui-selected': {
+			backgroundColor: theme.palette.primary.main,
+			color: theme.palette.common.white,
+		},
+	},
 }));
