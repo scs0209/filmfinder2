@@ -12,12 +12,16 @@ const moviesReducer = (state = initialState, action: MovieAction): MovieState =>
 		case MoviesActionTypes.GET_MOVIE_DETAILS_REQUEST:
 			return { ...state, loading: true };
 		case MoviesActionTypes.GET_MOVIE_DETAILS_SUCCESS:
-			console.log(state.data, action.payload);
 			return { loading: false, error: null, data: state.data, movieDetails: action.payload };
 		case MoviesActionTypes.GET_MOVIE_DETAILS_FAILURE:
 			return { ...state, loading: false, error: action.payload, movieDetails: null };
+		case MoviesActionTypes.GET_POPULAR_MOVIES_REQUEST:
+			return { ...state, loading: true };
+		case MoviesActionTypes.GET_POPULAR_MOVIES_SUCCESS:
+			return { ...state, loading: false, error: null, data: action.payload };
+		case MoviesActionTypes.GET_POPULAR_MOVIES_FAILURE:
+			return { ...state, loading: false, error: action.payload, data: null };
 		case MoviesActionTypes.SET_MOVIES:
-			console.log(state, action.payload);
 			return { ...state, data: action.payload };
 		default:
 			return state;

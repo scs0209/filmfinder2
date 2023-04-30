@@ -5,9 +5,9 @@ const API_KEY = 'cdfa5acb07c29f633e3999afff1890ea'; // 사용자의 TMDB API 키
 const API_URL = 'https://api.themoviedb.org/3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
-export const getPopularMovies = async () => {
-	const { data } = await axios.get(`${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
-	console.log(data.results);
+export const getPopularMovies = async (page: number) => {
+	const { data } = await axios.get(`${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`);
+	console.log(data); //Movies 인터페이스와 똑같은 형태
 	return data.results;
 };
 

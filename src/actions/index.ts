@@ -42,6 +42,24 @@ export const getMovieDetails =
 		}
 	};
 
+export const getPopularMovies = (page: number) => async (dispatch: Dispatch) => {
+	try {
+		dispatch({ type: MoviesActionTypes.GET_POPULAR_MOVIES_REQUEST });
+
+		const data = await api.getPopularMovies(page);
+
+		dispatch({
+			type: MoviesActionTypes.GET_POPULAR_MOVIES_SUCCESS,
+			payload: data as Movie[],
+		});
+	} catch (error: any) {
+		dispatch({
+			type: MoviesActionTypes.GET_POPULAR_MOVIES_FAILURE,
+			payload: error.message,
+		});
+	}
+};
+
 export const setMovies = (movies: Movie[]): SetMoviesAction => {
 	return {
 		type: MoviesActionTypes.SET_MOVIES,
